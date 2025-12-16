@@ -1,79 +1,100 @@
-# Kafka 瀛︿範婕旂ず椤圭洰
+# Kafka 学习演示项目
 
-杩欐槸涓€涓敤浜庡涔?Apache Kafka 鐨勬紨绀洪」鐩€?
+这是一个用于学习 Apache Kafka 的演示项目。
 
-## 馃摎 瀛︿範鍐呭
+## 📚 学习内容
 
-### 鍩虹姒傚康
-- Kafka 鏋舵瀯鍜屾牳蹇冩蹇?
-- Topics銆丳artitions銆丷eplicas
-- Producers 鍜?Consumers
+### 基础概念
+- Kafka 架构和核心概念
+- Topics、Partitions、Replicas
+- Producers 和 Consumers
 - Consumer Groups
-- Offset 绠＄悊
+- Offset 管理
 
-### 瀹炶返绀轰緥
-- [ ] 鐢熶骇鑰呯ず渚?
-- [ ] 娑堣垂鑰呯ず渚?
-- [ ] 娴佸鐞嗙ず渚?
-- [ ] 杩炴帴鍣ㄧず渚?
+### 实践示例
+- [x] 生产者示例
+- [x] 消费者示例
+- [ ] 流处理示例
+- [ ] 连接器示例
 
-## 馃殌 蹇€熷紑濮?
+## 🚀 快速开始
 
-### 鍓嶇疆瑕佹眰
-- Java 8+ 鎴?Python 3.7+
-- Apache Kafka锛堟湰鍦板畨瑁呮垨 Docker锛?
-- 鍙€夛細Docker 鍜?Docker Compose
+### 前置要求
+- Java 8+ 或 Python 3.7+
+- Apache Kafka（本地安装或 Docker）
+- 可选：Docker 和 Docker Compose
 
-### 瀹夎 Kafka
+### 安装 Kafka
 
-#### 浣跨敤 Docker锛堟帹鑽愶級
+#### 使用 Docker（推荐）
 ```bash
 docker-compose up -d
 ```
 
-#### 鏈湴瀹夎
-涓嬭浇骞惰В鍘?Kafka锛岀劧鍚庡惎鍔?Zookeeper 鍜?Kafka锛?
+这将启动以下服务：
+- **Zookeeper**: 端口 2181
+- **Kafka**: 端口 9092
+- **Kafka UI**: 端口 8080（Web 界面）
+
+访问 Kafka UI: http://localhost:8080
+
+#### 本地安装
+下载并解压 Kafka，然后启动 Zookeeper 和 Kafka：
 ```bash
-# 鍚姩 Zookeeper
+# 启动 Zookeeper
 bin/zookeeper-server-start.sh config/zookeeper.properties
 
-# 鍚姩 Kafka
+# 启动 Kafka
 bin/kafka-server-start.sh config/server.properties
 ```
 
-## 馃搧 椤圭洰缁撴瀯
+## 📁 项目结构
 
 ```
 kafka-demo/
-鈹溾攢鈹€ README.md           # 椤圭洰璇存槑
-鈹溾攢鈹€ docker-compose.yml  # Docker 閰嶇疆锛堝緟娣诲姞锛?
-鈹溾攢鈹€ java/               # Java 绀轰緥浠ｇ爜
-鈹溾攢鈹€ python/             # Python 绀轰緥浠ｇ爜
-鈹溾攢鈹€ config/             # 閰嶇疆鏂囦欢
-鈹斺攢鈹€ docs/               # 瀛︿範鏂囨。
+├── README.md           # 项目说明
+├── docker-compose.yml  # Docker 配置
+├── java/               # Java 示例代码
+├── python/             # Python 示例代码
+├── config/             # 配置文件
+└── docs/               # 学习文档
 ```
 
-## 馃敡 绀轰緥浠ｇ爜
+## 💻 示例代码
 
-### Java 绀轰緥
-鏌ョ湅 `java/` 鐩綍涓嬬殑绀轰緥浠ｇ爜銆?
+### Java 示例
+查看 `java/` 目录下的示例代码。
 
-### Python 绀轰緥
-鏌ョ湅 `python/` 鐩綍涓嬬殑绀轰緥浠ｇ爜銆?
+### Python 示例
 
-## 馃摉 瀛︿範璧勬簮
+#### 运行生产者
+```bash
+cd python
+python producer_example.py
+```
 
-- [Apache Kafka 瀹樻柟鏂囨。](https://kafka.apache.org/documentation/)
-- [Kafka 涓枃鏂囨。](https://kafka.apachecn.org/)
+#### 运行消费者
+```bash
+cd python
+python consumer_example.py
+```
 
-## 馃摑 瀛︿範绗旇
+## 📖 学习资源
 
-鍦ㄦ璁板綍瀛︿範杩囩▼涓殑閲嶈鐭ヨ瘑鐐瑰拰閬囧埌鐨勯棶棰樸€?
+- [Apache Kafka 官方文档](https://kafka.apache.org/documentation/)
+- [Kafka 快速入门](https://kafka.apache.org/quickstart)
+- [Kafka 中文文档](https://kafka.apachecn.org/)
 
-## 馃 璐＄尞
+## 📝 学习笔记
 
-娆㈣繋鎻愪氦 Issue 鍜?Pull Request锛?
+在此记录学习过程中的重要知识点和遇到的问题。
 
-## 馃搫 璁稿彲璇?
+详细内容请查看 [docs/learning-notes.md](docs/learning-notes.md)
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+## 📄 许可证
 
 MIT License
